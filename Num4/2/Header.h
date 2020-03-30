@@ -14,8 +14,8 @@ extern "C" MATHLIBRARY_API int NOK(int a, int b);
 
 extern "C" MATHLIBRARY_API int Sub(int a, int b);
 
-extern "C" MATHLIBRARY_API double Average(int count, ...);
+extern "C" MATHLIBRARY_API double Average(int count, double a, ...);
 
 extern "C" MATHLIBRARY_API int Mult(int a, int b);
 
-extern "C" MATHLIBRARY_API double Div(int a, int b);
+extern "C" MATHLIBRARY_API double Div(double a, double b);

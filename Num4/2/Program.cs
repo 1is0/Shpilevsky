@@ -2,15 +2,46 @@
 
 namespace DllTest
 {
+  
+
     class Program
     {
+        static int Check()
+        {
+            int a;
+            while(!int.TryParse(Console.ReadLine(),out a))
+            {
+                Console.WriteLine("Wrong data. Input again: ");
+            }
+            return a;
+        }
+
         static void Main()
         {
-            Console.WriteLine(MathOperations.Average(3,4,5,6));
+            Console.Write("a = ");
+            int a = Check();
 
-            Console.WriteLine(MathOperations.NOD(648,114));
+            Console.Write("b = ");
+            int b = Check();
+
+            Console.Write("c = ");
+            int c = Check();
+
+
+
+            Console.WriteLine($"Average of {a} {b} {c} is " + MathOperations.Average(3,a,b,c));
+
+            Console.WriteLine($"NOD of {a} & {b} is " + MathOperations.NOD(a,b));
             
-            Console.WriteLine(MathOperations.NOK(18,13));
+            Console.WriteLine($"NOK of {a} & {c} is " + MathOperations.NOK(a,c));
+
+            Console.WriteLine($"Sum of {a} {b} {c} is " + MathOperations.Sum(3,a,b,c));
+
+            Console.WriteLine($"{a} - {b} = " + MathOperations.Sub(a,b));
+
+            Console.WriteLine($"{b} * {c} = " + MathOperations.Mult(b,c));
+
+            Console.WriteLine($"{a} / {b} = " + MathOperations.Div(a,b));
         
         }
     }

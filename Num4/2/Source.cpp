@@ -37,9 +37,10 @@ int NOK(int a, int b)
 	return (a * b) / NOD(a, b);
 }
 
-double Average(int n, ...)
+double Average(int n, double a,...)
 {
 	va_list p;
+
 	double sum = 0, count = 0;
 
 	va_start(p, n);
@@ -65,10 +66,8 @@ int Mult(int a, int b)
 }
 
 
-double Div(int a, int b)
+double Div(double a, double b)
 {
 	if (b != 0)
 		return a / b;
-	else
-		return 0;
 }

@@ -23,6 +23,6 @@ namespace DllTest
         public static extern int Mult(int a, int b);
 
         [DllImport("Dll.dll", CallingConvention = CallingConvention.StdCall)]
-        public static extern double Div(int a, int b);
+        public static extern double Div(double a, double b);
     }
 }
