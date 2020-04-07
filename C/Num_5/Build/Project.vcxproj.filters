@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\2-ой сем\C\C_Labs\Num_5\ConsoleApplication2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\2-ой сем\C\C_Labs\Num_5\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{143FDFBB-AE09-3F02-A748-D0DFA4C2122A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
