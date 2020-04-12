@@ -17,6 +17,26 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	tree = new BTree();
         StringGrid1->Cells[0][0] = "Фамилия";
 	StringGrid1->Cells[1][0] = "Призовое место";
+
+	Button2->Enabled = false;
+	Button3->Enabled = false;
+	Button4->Enabled = false;
+	Button5->Enabled = false;
+	Button6->Enabled = false;
+	Button7->Enabled = false;
+        Button8->Enabled = false;
+
+}
+
+void TurnOn()
+{
+	Form1->Button2->Enabled = true;
+	Form1->Button3->Enabled = true;
+	Form1->Button4->Enabled = true;
+	Form1->Button5->Enabled = true;
+	Form1->Button6->Enabled = true;
+	Form1->Button7->Enabled = true;
+       Form1->Button8->Enabled = true;
 }
 //---------------------------------------------------------------------------
 void Clear()
@@ -36,6 +56,7 @@ bool IsRepeat(int num)
 
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
+
 	Memo1->Clear();
 	 int place;
          AnsiString str;
@@ -56,6 +77,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	tree->insert(place, str);
 	tree->inorder_print(Memo1);
 	tree->ShowTree(Form1->TreeView1);
+                TurnOn();
 	}
 
 	else
@@ -64,7 +86,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	}
 
 
-          	Clear();
+	Clear();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)

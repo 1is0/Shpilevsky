@@ -15,18 +15,30 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 84
-    Top = 40
-    Width = 44
-    Height = 13
+    Left = 285
+    Top = 36
+    Width = 56
+    Height = 19
     Caption = #1060#1072#1084#1080#1083#1080#1103
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
   end
   object Label2: TLabel
-    Left = 48
-    Top = 75
-    Width = 80
-    Height = 13
+    Left = 249
+    Top = 71
+    Width = 105
+    Height = 19
     Caption = #1055#1088#1080#1079#1086#1074#1086#1077' '#1084#1077#1089#1090#1086
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
   end
   object Memo1: TMemo
     Left = 536
@@ -57,14 +69,14 @@ object Form1: TForm1
       133)
   end
   object Edit1: TEdit
-    Left = 141
+    Left = 360
     Top = 37
     Width = 121
     Height = 21
     TabOrder = 2
   end
   object Edit2: TEdit
-    Left = 141
+    Left = 360
     Top = 72
     Width = 121
     Height = 21
@@ -85,6 +97,12 @@ object Form1: TForm1
     Width = 121
     Height = 53
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 5
     OnClick = Button1Click
   end
@@ -94,6 +112,12 @@ object Form1: TForm1
     Width = 119
     Height = 53
     Caption = #1041#1072#1083#1072#1085#1089#1080#1088#1086#1074#1082#1072
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 6
     OnClick = Button2Click
   end
@@ -103,6 +127,12 @@ object Form1: TForm1
     Width = 121
     Height = 53
     Caption = #1055#1086#1080#1089#1082' '#1087#1086' '#1082#1083#1102#1095#1091
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 7
     OnClick = Button3Click
   end
@@ -112,6 +142,12 @@ object Form1: TForm1
     Width = 121
     Height = 55
     Caption = #1055#1088#1103#1084#1086#1081' '#1086#1073#1093#1086#1076
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 8
     OnClick = Button4Click
   end
@@ -121,6 +157,12 @@ object Form1: TForm1
     Width = 121
     Height = 55
     Caption = #1054#1073#1088#1072#1090#1085#1099#1081' '#1087#1086#1076#1093#1086#1076
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 9
     OnClick = Button5Click
   end
@@ -130,6 +172,12 @@ object Form1: TForm1
     Width = 121
     Height = 55
     Caption = #1055#1086' '#1074#1086#1079#1088#1072#1089#1090#1072#1085#1080#1102
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 10
     OnClick = Button6Click
   end
@@ -139,15 +187,27 @@ object Form1: TForm1
     Width = 121
     Height = 53
     Caption = #1059#1076#1072#1083#1080#1090#1100' '#1101#1083#1077#1084#1077#1085#1090
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 11
     OnClick = Button7Click
   end
   object Button8: TButton
     Left = 489
     Top = 236
-    Width = 119
+    Width = 136
     Height = 55
     Caption = #1069#1083'-'#1086#1074' '#1074' '#1087#1088#1072#1074#1086#1081' '#1074#1077#1090#1082#1077
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
     TabOrder = 12
     OnClick = Button8Click
   end
