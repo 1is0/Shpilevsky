@@ -1,0 +1,91 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 570
+  ClientWidth = 796
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 84
+    Top = 40
+    Width = 44
+    Height = 13
+    Caption = #1060#1072#1084#1080#1083#1080#1103
+  end
+  object Label2: TLabel
+    Left = 48
+    Top = 75
+    Width = 80
+    Height = 13
+    Caption = #1055#1088#1080#1079#1086#1074#1086#1077' '#1084#1077#1089#1090#1086
+  end
+  object Memo1: TMemo
+    Left = 536
+    Top = 376
+    Width = 257
+    Height = 185
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 8
+    Top = 376
+    Width = 254
+    Height = 185
+    ColCount = 2
+    FixedCols = 0
+    RowCount = 1
+    FixedRows = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 1
+    ColWidths = (
+      114
+      133)
+  end
+  object Edit1: TEdit
+    Left = 141
+    Top = 37
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 141
+    Top = 72
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 3
+  end
+  object TreeView1: TTreeView
+    Left = 264
+    Top = 376
+    Width = 266
+    Height = 185
+    Indent = 19
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 48
+    Top = 112
+    Width = 75
+    Height = 25
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+end
