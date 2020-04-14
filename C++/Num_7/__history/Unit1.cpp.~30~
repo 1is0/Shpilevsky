@@ -1,0 +1,113 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "ctime.h"
+#include "HashMap.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+
+HashMap* map;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	map = new HashMap();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+       srand(time(NULL));
+       int key  = rand()%10 + 1;
+
+       Edit2->Text = IntToStr(key);
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	if(Edit1->Text =="")
+	{
+	    ShowMessage("Введите фамилию");
+	    return;
+	}
+
+	if(Edit2->Text == "")
+	{
+	    ShowMessage("Сгенерируйте ключ");
+	    return;
+	}
+
+	Memo1->Clear();
+	int key = StrToInt(Edit2->Text);
+	AnsiString surname = Edit1->Text;
+	map->insertNode(key,surname);
+
+	map->display(Memo1);
+
+	Edit1->Text = "";
+	Edit2->Text = "";
+
+	Label2->Enabled = true;
+	Button3->Enabled =true;
+
+	Edit3->Enabled = true;
+        Button4->Enabled =true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	if(map->pop_key())
+	{
+	AnsiString str = "Самый частый ключ - " + IntToStr(map->pop_key());
+	Memo1->Clear();
+	Memo1->Lines->Add(str);
+	}
+
+	else
+	{
+            ShowMessage("Невозможно определить");
+        }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+
+	if(Edit3->Text!= "" && StrToInt(Edit3->Text)<=10)
+	{
+	int key = StrToInt(Edit3->Text);
+
+	Memo1->Clear();
+
+	map->search(Memo1, key);
+	}
+
+	else
+	{
+	    ShowMessage("Некорректный ввод");
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button5Click(TObject *Sender)
+{
+	if(Edit3->Text!="" && StrToInt(Edit3->Text)<=10)
+	{
+	   int key = StrToInt(Edit3->Text);
+
+	   map->Delete(key);
+
+	   Memo1->Clear();
+           map->display(Memo1);
+	}
+
+	else
+	{
+            ShowMessage("Некорректный ввод");
+        }
+}
+//---------------------------------------------------------------------------

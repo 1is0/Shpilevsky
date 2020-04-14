@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899/12/30 00:00:00.000.576,=D:\2-ой сем\C++\Lerning\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.516,=D:\2-ой сем\C++\Lerning\Project1PCH1.h</Transaction>
+    <Transaction>2020/04/12 17:00:09.681,=D:\2-ой сем\C++\Lerning\Project1PCH1.h</Transaction>
+    <Transaction>2020/04/12 17:00:09.760,=D:\2-ой сем\C++\Lerning\Unit1.cpp</Transaction>
+    <Transaction>2020/04/12 17:00:17.579,=D:\2-ой сем\C++\Lerning\Unit2.cpp</Transaction>
+    <Transaction>2020/04/12 17:00:44.702,D:\2-ой сем\C++\Lerning\HashMap.cpp=D:\2-ой сем\C++\Lerning\Unit2.cpp</Transaction>
+    <Transaction>2020/04/12 17:00:44.702,D:\2-ой сем\C++\Lerning\HashMap.h=D:\2-ой сем\C++\Lerning\Unit2.h</Transaction>
+    <Transaction>2020/04/12 17:03:29.711,D:\2-ой сем\C++\Labs\Num_7\HashMap.cpp=D:\2-ой сем\C++\Lerning\HashMap.cpp</Transaction>
+    <Transaction>2020/04/12 17:03:29.711,D:\2-ой сем\C++\Labs\Num_7\HashMap.h=D:\2-ой сем\C++\Lerning\HashMap.h</Transaction>
+    <Transaction>2020/04/12 17:03:31.698,D:\2-ой сем\C++\Labs\Num_7\Unit1.h=D:\2-ой сем\C++\Lerning\Unit1.h</Transaction>
+    <Transaction>2020/04/12 17:03:31.698,D:\2-ой сем\C++\Labs\Num_7\Unit1.dfm=D:\2-ой сем\C++\Lerning\Unit1.dfm</Transaction>
+    <Transaction>2020/04/12 17:03:31.698,D:\2-ой сем\C++\Labs\Num_7\Unit1.cpp=D:\2-ой сем\C++\Lerning\Unit1.cpp</Transaction>
+    <Transaction>2020/04/12 17:03:33.214,D:\2-ой сем\C++\Labs\Num_7\Project1PCH1.h=D:\2-ой сем\C++\Lerning\Project1PCH1.h</Transaction>
+    <Transaction>2020/04/12 17:03:34.519,D:\2-ой сем\C++\Labs\Num_7\Project1.cbproj=D:\2-ой сем\C++\Lerning\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
