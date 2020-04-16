@@ -113,14 +113,14 @@ Node* BTree::search(int key, TMemo* Memo)
     if(temp)
     {
        Memo->Clear();
-       Memo->Lines->Add("Êëş÷: " + IntToStr(key));
-       Memo->Lines->Add("Ôàìèëèÿ: " + temp->surname);
+       Memo->Lines->Add("ÃŠÃ«Ã¾Ã·: " + IntToStr(key));
+       Memo->Lines->Add("Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿: " + temp->surname);
     }
 
     else
     {
           Memo->Clear();
-       Memo->Lines->Add("Ïî çàäàííîìó êëş÷ó íè÷åãî íå íàéäåíî");
+       Memo->Lines->Add("ÃÃ® Ã§Ã Ã¤Ã Ã­Ã­Ã®Ã¬Ã³ ÃªÃ«Ã¾Ã·Ã³ Ã­Ã¨Ã·Ã¥Ã£Ã® Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­Ã®");
     }
 }
 
@@ -232,7 +232,6 @@ Node* BTree :: MakeTree(int *arr, AnsiString *str, int first, int last)
 	Node *node = new Node;
 	node->surname = str[first + last / 2];
 	node->place = arr[first + last / 2];
-       //	NumNodes++;
 	int lastl = last / 2;
 	int lastr = last - lastl - 1;
 	node->left = MakeTree(arr, str, first, lastl);
