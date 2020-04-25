@@ -20,15 +20,15 @@ public:
 	BTree();
 	~BTree();
 
-	void insert(int num, AnsiString Surname);
+	void Insert(int num, AnsiString Surname);
 
-	Node* search(int key,TMemo*);
+	Node* Search(int key,TMemo*);
 
-	void destroy_tree();
+	void DestroyTree();
 
-	void inorder_print(TMemo*);
-	void postorder_print(TMemo*);
-	void preorder_print(TMemo*);
+	void InorderPrint(TMemo*);
+	void PostorderPrint(TMemo*);
+	void PreorderPrint(TMemo*);
 
 	void PrintTree(Node* temp, TTreeView *TreeView, int &index);
 	void ShowTree(TTreeView *TreeView);
@@ -36,20 +36,20 @@ public:
 	void Balance();
 	void DeleteNode(int num);
 
-	void RightWingSize(int &amount);
+	void LeftWingSize(int &amount);
 
 
 private:
-	void destroy_tree(Node *leaf);
-	void insert(int key,AnsiString Surname, Node *leaf);
-	Node *search(int key,Node *leaf);
-	void inorder_print(TMemo*, Node *leaf);
-	void postorder_print(TMemo*,Node *leaf);
-	void preorder_print(TMemo*,Node *leaf);
+	void DestroyTree(Node *leaf);
+	void Insert(int key,AnsiString Surname, Node *leaf);
+	Node *Search(int key,Node *leaf);
+	void InorderPrint(TMemo*, Node *leaf);
+	void PostorderPrint(TMemo*,Node *leaf);
+	void PreorderPrint(TMemo*,Node *leaf);
 	void ToArray(Node*, int*, AnsiString*, int&);
 	Node* MakeTree(int*, AnsiString*, int, int);
-	void size(Node*,int &amount);
-        void RightWingSize(Node* p,int &amount);
+	void Size(Node*,int &amount);
+	void LeftWingSize(Node* p,int &amount);
 
 
 	Node* root;

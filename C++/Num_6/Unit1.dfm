@@ -201,7 +201,7 @@ object Form1: TForm1
     Top = 236
     Width = 136
     Height = 55
-    Caption = #1069#1083'-'#1086#1074' '#1074' '#1087#1088#1072#1074#1086#1081' '#1074#1077#1090#1082#1077
+    Caption = #1069#1083'-'#1086#1074' '#1074' '#1083#1077#1074#1086#1081' '#1074#1077#1090#1082#1077
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -12

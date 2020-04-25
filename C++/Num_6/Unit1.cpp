@@ -58,8 +58,10 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 {
 
 	Memo1->Clear();
+
 	 int place;
          AnsiString str;
+
 	if(Edit1->Text!="")
 	 str = Edit1->Text;
 
@@ -69,13 +71,11 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
 	if(IsRepeat(place)&& Edit1->Text!=""  && Edit2->Text!="" && StrToInt(Edit2->Text)>=1 && StrToInt(Edit2->Text)<=1000)
 	{
-
-
 	StringGrid1->RowCount++;
 	StringGrid1->Cells[0][StringGrid1->RowCount - 1] = str;
 	StringGrid1->Cells[1][StringGrid1->RowCount - 1] = place;
-	tree->insert(place, str);
-	tree->inorder_print(Memo1);
+	tree->Insert(place, str);
+	tree->InorderPrint(Memo1);
 	tree->ShowTree(Form1->TreeView1);
                 TurnOn();
 	}
@@ -91,7 +91,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
 {
-	tree->destroy_tree();
+	tree->DestroyTree();
 }
 //---------------------------------------------------------------------------
 
@@ -112,7 +112,7 @@ void __fastcall TForm1::Button3Click(TObject *Sender)
 	{
 	int key = StrToInt(Edit2->Text);
 
-	tree->search(key, Memo1);
+	tree->Search(key, Memo1);
 	}
 
 	else
@@ -125,14 +125,14 @@ void __fastcall TForm1::Button3Click(TObject *Sender)
 void __fastcall TForm1::Button4Click(TObject *Sender)
 {
 	Memo1->Clear();
-	tree->preorder_print(Memo1);
+	tree->PreorderPrint(Memo1);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button5Click(TObject *Sender)
 {
 	Memo1->Clear();
-	tree->postorder_print(Memo1);
+	tree->PostorderPrint(Memo1);
 }
 
 
@@ -141,7 +141,7 @@ void __fastcall TForm1::Button5Click(TObject *Sender)
 void __fastcall TForm1::Button6Click(TObject *Sender)
 {
 	Memo1->Clear();
-	tree->inorder_print(Memo1);
+	tree->InorderPrint(Memo1);
 }
 //---------------------------------------------------------------------------
 
@@ -193,7 +193,7 @@ void __fastcall TForm1::Button7Click(TObject *Sender)
 void __fastcall TForm1::Button8Click(TObject *Sender)
 {
 	int amount = 0;
-	tree->RightWingSize(amount);
+	tree->LeftWingSize(amount);
 
         ShowMessage("Количество: " + IntToStr(amount));
 }
