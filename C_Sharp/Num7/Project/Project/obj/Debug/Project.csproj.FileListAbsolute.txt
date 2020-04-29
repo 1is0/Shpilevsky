@@ -1,0 +1,6 @@
+D:\2-ой сем\C#\Labs\Num7\Project\Project\bin\Debug\Project.exe.config
+D:\2-ой сем\C#\Labs\Num7\Project\Project\bin\Debug\Project.exe
+D:\2-ой сем\C#\Labs\Num7\Project\Project\bin\Debug\Project.pdb
+D:\2-ой сем\C#\Labs\Num7\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+D:\2-ой сем\C#\Labs\Num7\Project\Project\obj\Debug\Project.exe
+D:\2-ой сем\C#\Labs\Num7\Project\Project\obj\Debug\Project.pdb
