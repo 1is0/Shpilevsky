@@ -4,33 +4,6 @@ namespace Project
 {
     class Program
     {
-        public static int GetNat()
-        {
-            int a;
-
-            while (!int.TryParse(Console.ReadLine(), out a) || a <= 0)
-            {
-                Console.Write("Incorrect input, repeat: ");
-            }
-
-            return a;
-        }
-
-        public static int GetInt()
-        {
-
-            int a;
-
-            while (!int.TryParse(Console.ReadLine(), out a))
-            {
-                Console.Write("Incorrect input, repeat: ");
-            }
-
-            return a;
-        }
-
-
-
         public static double GetDouble()
         {
 
