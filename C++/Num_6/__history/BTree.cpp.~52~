@@ -13,26 +13,26 @@ BTree::BTree()
 
 BTree::~BTree()
 {
-    destroy_tree();
+    DestroyTree();
 }
 
-void BTree::destroy_tree(Node* leaf)
+void BTree::DestroyTree(Node* leaf)
 {
 	if(leaf)
 	{
-	    destroy_tree(leaf->left);
-	    destroy_tree(leaf->right);
+	    DestroyTree(leaf->left);
+	    DestroyTree(leaf->right);
 	    delete leaf;
         }
 }
 
-void BTree::insert(int num, AnsiString surname, Node* leaf)
+void BTree::Insert(int num, AnsiString surname, Node* leaf)
 {
 	if(num<leaf->place)
 	{
 	    if(leaf->left)
 	    {
-		insert(num,surname,leaf->left);
+		Insert(num,surname,leaf->left);
 	    }
 
 	    else
@@ -49,7 +49,7 @@ void BTree::insert(int num, AnsiString surname, Node* leaf)
 	{
 	    if(leaf->right)
 	    {
-		insert(num,surname,leaf->right);
+		Insert(num,surname,leaf->right);
 	    }
 
 	    else
@@ -64,11 +64,11 @@ void BTree::insert(int num, AnsiString surname, Node* leaf)
         }
 }
 
-void BTree::insert(int key, AnsiString str)
+void BTree::Insert(int key, AnsiString str)
 {
     if(root)
     {
-	insert(key, str, root);
+	Insert(key, str, root);
     }
 
     else
@@ -81,7 +81,7 @@ void BTree::insert(int key, AnsiString str)
     }
 }
 
-Node* BTree::search(int key,Node *leaf)
+Node* BTree::Search(int key,Node *leaf)
 {
     if(leaf)
     {
@@ -92,12 +92,12 @@ Node* BTree::search(int key,Node *leaf)
 
 	if(key<leaf->place)
 	{
-	    return search(key, leaf->left);
+	    return Search(key, leaf->left);
 	}
 
 	else
 	{
-	    return search(key, leaf->right);
+	    return Search(key, leaf->right);
 	}
     }
 
@@ -107,9 +107,9 @@ Node* BTree::search(int key,Node *leaf)
     }
 }
 
-Node* BTree::search(int key, TMemo* Memo)
+Node* BTree::Search(int key, TMemo* Memo)
 {
-	Node *temp = search(key, root);
+	Node *temp = Search(key, root);
     if(temp)
     {
        Memo->Clear();
@@ -124,67 +124,69 @@ Node* BTree::search(int key, TMemo* Memo)
     }
 }
 
-void BTree::destroy_tree()
+void BTree::DestroyTree()
 {
-    destroy_tree(root);
+    DestroyTree(root);
 }
 
-void BTree::inorder_print(TMemo* Memo)
+void BTree::InorderPrint(TMemo* Memo)
 {
-    inorder_print(Memo, root);
+    InorderPrint(Memo, root);
     Memo->Lines->Add("\n");
 }
 
-void BTree::inorder_print(TMemo* Memo, Node* leaf)
+void BTree::InorderPrint(TMemo* Memo, Node* leaf)
 {
     if(leaf)
     {
-	inorder_print(Memo, leaf->left);
+	InorderPrint(Memo, leaf->left);
 	Memo->Lines->Add(IntToStr(leaf->place) + " - " + leaf->surname + ",");
-	inorder_print(Memo,leaf->right);
+	InorderPrint(Memo,leaf->right);
     }
 }
 
-void BTree::postorder_print(TMemo* Memo)
+void BTree::PostorderPrint(TMemo* Memo)
 {
-    postorder_print(Memo, root);
+    PostorderPrint(Memo, root);
     Memo->Lines->Add("\n");
 }
 
-void BTree::postorder_print(TMemo* Memo, Node* leaf)
+void BTree::PostorderPrint(TMemo* Memo, Node* leaf)
 {
     if(leaf)
     {
-	postorder_print(Memo, leaf->left);
-	postorder_print(Memo, leaf->right);
+	PostorderPrint(Memo, leaf->left);
+	PostorderPrint(Memo, leaf->right);
 	Memo->Lines->Add(IntToStr(leaf->place) + " - " + leaf->surname + ",");
     }
 }
 
-void BTree::preorder_print(TMemo* Memo)
+void BTree::PreorderPrint(TMemo* Memo)
 {
-    preorder_print(Memo, root);
+    PreorderPrint(Memo, root);
     Memo->Lines->Add("\n");
 }
 
-void BTree::preorder_print(TMemo* Memo, Node* leaf)
+void BTree::PreorderPrint(TMemo* Memo, Node* leaf)
 {
     if(leaf)
     {
 	Memo->Lines->Add(IntToStr(leaf->place) + " - " + leaf->surname + ",");
-	preorder_print(Memo, leaf->left);
-	preorder_print(Memo, leaf->right);
+	PreorderPrint(Memo, leaf->left);
+	PreorderPrint(Memo, leaf->right);
     }
 }
 
 void BTree :: PrintTree(Node* temp, TTreeView *TreeView, int &index)
 {
 	int i = index;
+
 	if(temp->left)
 	{
 		TreeView->Items->AddChild(TreeView->Items->Item[i], temp->left->surname);
 		PrintTree(temp->left, TreeView, ++index);
 	}
+
 	if(temp->right)
 	{
 		TreeView->Items->AddChild(TreeView->Items->Item[i], temp->right->surname);
@@ -195,7 +197,9 @@ void BTree :: PrintTree(Node* temp, TTreeView *TreeView, int &index)
 void BTree :: ShowTree(TTreeView *TreeView)
 {
 	int index = 0;
+
 	TreeView->Items->Clear();
+
 	if(root)
 	{
 		TreeView->Items->Add(NULL, root->surname);
@@ -207,13 +211,17 @@ void BTree :: Balance()
 {
 	int amount = 0;
 
-	size(root,amount);
+	Size(root,amount);
 
 	int* arr = new int[amount];
+
 	AnsiString* str = new AnsiString[amount];
+
 	int size = 0;
+
 	ToArray(root, arr, str, size);
-	destroy_tree(root);
+	DestroyTree(root);
+
 	root = MakeTree(arr, str, 0, size);
 }
 
@@ -228,30 +236,37 @@ void BTree :: ToArray(Node *p, int* arr, AnsiString* str, int &index)
 
 Node* BTree :: MakeTree(int *arr, AnsiString *str, int first, int last)
 {
-	if(!last) return nullptr;
+	if(!last)
+	{
+	     return nullptr;
+	}
 	Node *node = new Node;
+
 	node->surname = str[first + last / 2];
 	node->place = arr[first + last / 2];
+
 	int lastl = last / 2;
 	int lastr = last - lastl - 1;
+
 	node->left = MakeTree(arr, str, first, lastl);
 	node->right = MakeTree(arr, str, first + lastl + 1, lastr);
+
 	return node;
 }
 
-void BTree::size(Node* p,int &amount)
+void BTree::Size(Node* p,int &amount)
 {
     if(p)
     {
 	if(p->left)
 	{
-	    size(p->left,amount);
+	    Size(p->left,amount);
 	    amount++;
 	}
 
 	if(p->right)
 	{
-            size(p->right,amount);
+            Size(p->right,amount);
 	    amount++;
         }
     }
@@ -275,6 +290,7 @@ void BTree :: DeleteNode(int num)
 	while(del->place != num)
 	{
 		prevdel = del;
+
 		if(num < del->place)
 		{
 		    del = del->left;
@@ -306,6 +322,7 @@ void BTree :: DeleteNode(int num)
 	{
 		prevnode = del;
 		node = del->left;
+
 		while(node->right)
 		{
 			prevnode = node;
@@ -345,7 +362,7 @@ void BTree :: DeleteNode(int num)
 void BTree::LeftWingSize(int &amount)
 {
 
-	LeftWingSize(root,amount);
+	LeftWingSize(root->left,amount);
 }
 
 void BTree::LeftWingSize(Node* p,int &amount)
@@ -358,9 +375,12 @@ void BTree::LeftWingSize(Node* p,int &amount)
 	    LeftWingSize(p->left,amount);
 	    amount++;
 	}
+	if(p->right)
+	{
+	    LeftWingSize(p->right, amount);
+	    amount++;
+        }
     }
-
-
 
     else
     {

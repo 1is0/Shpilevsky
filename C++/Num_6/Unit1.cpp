@@ -192,7 +192,7 @@ void __fastcall TForm1::Button7Click(TObject *Sender)
 
 void __fastcall TForm1::Button8Click(TObject *Sender)
 {
-	int amount = 0;
+	int amount = 1;
 	tree->LeftWingSize(amount);
 
         ShowMessage("Количество: " + IntToStr(amount));

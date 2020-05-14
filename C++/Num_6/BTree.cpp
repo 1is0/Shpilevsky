@@ -362,7 +362,7 @@ void BTree :: DeleteNode(int num)
 void BTree::LeftWingSize(int &amount)
 {
 
-	LeftWingSize(root,amount);
+	LeftWingSize(root->left,amount);
 }
 
 void BTree::LeftWingSize(Node* p,int &amount)
@@ -375,6 +375,12 @@ void BTree::LeftWingSize(Node* p,int &amount)
 	    LeftWingSize(p->left,amount);
 	    amount++;
 	}
+
+	if(p->right)
+	{
+	    LeftWingSize(p->right, amount);
+	    amount++;
+        }
     }
 
 
